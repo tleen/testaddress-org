@@ -1,0 +1,17 @@
+---
+layout: none
+---
+/* TEAM */
+  Everything: Tom Leen
+  E-mail: tl - at - thomasleen.com
+  Web: http://www.thomasleen.com
+  From: Portland, Maine
+
+/* SITE */
+  Last update: {{ site.time | date_to_long_string }}
+  Tech: GitHub Pages, Jekyll
+
+/* THANKS */
+  Hello Happy: for design, http://hellohappy.org/beautiful-web-type/
+  
+
