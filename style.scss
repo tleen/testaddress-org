@@ -3,6 +3,55 @@
 
 @import 'reset';
 
-body{
+$color-alt: #ef4723;
+$color-text: #666;
+$footer-size: 40px;
 
+
+body{
+  border-top: $footer-size solid $color-alt; 
+  color: $color-text;
+  font-family: 'open sans', sans-serif;
+  font-size: 13px;
+}
+
+a{
+  color: darken($color-text, 20%);
+  text-decoration: none;
+  &:hover{
+    text-decoration: underline;
+  }
+}
+
+h1{
+  color: #000;
+  font-family: 'Abril Fatface', serif;
+  font-size: 87px;
+  font-weight: normal;
+}
+
+.content{
+  padding: $footer-size;
+  text-align: center;
+
+  p{
+    line-height: 21px;
+  }
+}
+
+footer{
+  background-color: $color-alt;
+  box-sizing: border-box;
+  bottom: 0;
+  color: #222;
+  height: $footer-size;
+  line-height: $footer-size;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+
+  p{
+    display: inline-block;
+    vertical-align: middle;
+  }
 }
