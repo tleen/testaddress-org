@@ -36,7 +36,12 @@ h1{
   text-align: center;
 
   p{
+    display: inline-block;
     line-height: 21px;
+    margin-right: $footer-size;
+    text-align: justify;
+    vertical-align: top;
+    width: 30%;
   }
 }
 
