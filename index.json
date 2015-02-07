@@ -1,5 +1,5 @@
 ---
 ---
 {
-  "now" : "{{ site.time | date_to_rfc822 }}"
+  "now" : {{ site.time | jsonify }}
 }
