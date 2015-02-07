@@ -1,4 +1,5 @@
 ---
+layout: none
 ---
 {
   "now" : {{ site.time | jsonify }}
