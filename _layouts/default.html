@@ -9,5 +9,9 @@
   </head>
   <body>
     {{ content }}
+
+    <footer>
+      Last updated: <span class="generated">{{ site.time | date: "%A, %B %-d, %Y" }}</span>
+    </footer>
   </body>
 </html>
