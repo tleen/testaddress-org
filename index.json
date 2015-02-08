@@ -2,5 +2,5 @@
 layout: none
 ---
 {
-  "now" : {{ site.time | jsonify }}
+  "generated" : {{ site.time | jsonify }}
 }
