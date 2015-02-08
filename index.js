@@ -15,6 +15,8 @@ router.use('*', function(req, res, next){
 
     if(err) return next(err);
 
+    res.header(response.headers);
+    res.status(response.statusCode);
     switch(response.headers['content-type']){
 
       case 'application/json':
@@ -22,7 +24,7 @@ router.use('*', function(req, res, next){
         data.generated = new Date();
         return res.json(data);
 
-      default:
+      case 'text/html':       
         var $ = cheerio.load(body);
         var format = $('html').attr('data-date-format-visual');
         var now = moment();    
@@ -32,7 +34,10 @@ router.use('*', function(req, res, next){
         $('meta[data-date-generated]').attr('content', visual);
         $('body *[data-date-generated]').html(visual);
 
-        return res.status(response.statusCode).send($.html());
+        return res.send($.html());
+
+      default:
+        return res.send(body);
     }
   });
 });
