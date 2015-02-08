@@ -3,7 +3,7 @@
 <!doctype html>
 {% comment %} date format visual is the moment.js format for showing dates as display, data-date should be iso 8601/xmlschema{% endcomment %}
 {% assign date_format_visual = "%A, %B %-d %Y, %I:%M:%S %p" %}
-<html data-date-format-visual="dddd, MMMM Do YYYY, h:mm:ss a">
+<html data-date-format-visual="dddd, MMMM Do YYYY, h:mm:ss A">
   <head>
     <meta charset="utf-8">
     <meta name="generated" data-date-generated="{{ site.time | date_to_xmlschema }}" content="{{ site.time | date: date_format_visual }}">
