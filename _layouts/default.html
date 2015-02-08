@@ -1,10 +1,12 @@
 ---
 ---
 <!doctype html>
-<html>
+{% comment %} date format visual is the moment.js format for showing dates as display, data-date should be iso 8601/xmlschema{% endcomment %}
+{% assign date_format_visual = "%A, %B %-d %Y, %I:%M:%S %p" %}
+<html data-date-format-visual="dddd, MMMM Do YYYY, h:mm:ss a">
   <head>
     <meta charset="utf-8">
-    <meta name="generated" content="{{ site.time | date_to_rfc822 }}">
+    <meta name="generated" data-date-generated="{{ site.time | date_to_xmlschema }}" content="{{ site.time | date: date_format_visual }}">
     <title>{{ page.title }} {{ site.title }}</title>
 
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans:700,400|Abril+Fatface">
@@ -15,7 +17,7 @@
       {{ content }}
     </div>
     <footer>
-      <p>Last updated: <span class="generated">{{ site.time | date: "%A, %B %-d, %Y" }}</span></p>
+      <p>Last updated: <span class="generated" data-date-generated="{{ site.time | date_to_xmlschema }}">{{ site.time | date : date_format_visual }}</span></p>
     </footer>
     {% include ga.js %}
   </body>
