@@ -1,0 +1,34 @@
+{
+  "name" : "testaddress-org",
+  "version" : "0.0.0",
+  "main" : "./index.js",
+  "scripts" : {
+    "test" : "node_modules/grunt-cafe-mocha/node_modules/mocha/bin/mocha --ui bdd --reporter spec --require should test/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/tleen/testaddress-org.git"
+  },
+  "author": {
+    "name" : "Tom Leen",
+    "email" : "tl@thomasleen.com",
+    "url" : "http://www.thomasleen.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tleen/testaddress-org/issues"
+  },
+  "devDependencies" : {
+    "grunt" : "0.4.5",
+    "grunt-cafe-mocha" : "0.1.13",
+    "grunt-contrib-jshint" : "0.11.0",
+    "should" : "4.6.5",
+    "supertest" : "0.15.0"
+  },
+  "dependencies" : {
+    "cheerio" : "0.18.0",
+    "express" : "4.11.2",
+    "moment" : "2.9.0",
+    "request" : "2.53.0"
+  }
+}
