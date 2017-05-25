@@ -9,7 +9,7 @@ layout: none
 
 /* SITE */
   Last update: {{ site.time | date_to_long_string }}
-  Tech: GitHub Pages, Jekyll
+  Tech: GitHub Pages, Jekyll, AWS Route 53
 
 /* THANKS */
   Hello Happy: for design, http://hellohappy.org/beautiful-web-type/
